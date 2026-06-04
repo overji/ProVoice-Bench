@@ -1,0 +1,467 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "realtime_aqi",
+      "description": "Weather forecast. Get real-time Air Quality Index (AQI). Provides current AQI, PM2.5, and PM10 information.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "city": {
+            "type": "string",
+            "description": "City name, e.g., 'Shanghai'"
+          }
+        },
+        "required": [
+          "city"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "search",
+      "description": "Search for general knowledge or personal history information.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string",
+            "enum": [
+              "world",
+              "timeline"
+            ],
+            "description": "The source of information to search from."
+          },
+          "query_item": {
+            "type": "string",
+            "description": "The specific item or topic to search for (e.g., 'Red delicious apple')."
+          },
+          "query": {
+            "type": "string",
+            "description": "The specific question or property to retrieve (e.g., 'Nutritional content')."
+          }
+        },
+        "required": [
+          "source",
+          "query_item",
+          "query"
+        ]
+      }
+    }
+  },
+  {
+      "type": "function",
+      "function": {
+        "name": "QueryStock",
+        "description": "This API queries the stock price of a given stock code and date.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "stockCode": {
+              "type": "string",
+              "description": "The stock code of the given stock."
+            },
+            "stockPriceDate": {
+              "type": "string",
+              "description": "The date of the stock price."
+            },
+            "stockPrice": {
+              "type": "string",
+              "description": "The stock price of the given stock."
+            }
+          },
+          "required": [
+            "stockCode",
+            "stockPriceDate",
+            "stockPrice"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "temporal_attention",
+      "description": "Set or unset a temporal attention or reminder.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "set",
+              "unset"
+            ],
+            "description": "Whether to set or unset the attention."
+          },
+          "time": {
+            "type": "string",
+            "description": "The time duration or specific time (e.g., 'Ten minutes')."
+          },
+          "content": {
+            "type": "string",
+            "description": "The content of the attention (e.g., 'Get ready for work')."
+          }
+        },
+        "required": [
+          "action",
+          "time",
+          "content"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "guided_activity",
+      "description": "Initiate a guided activity like meditation or workout.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string",
+            "description": "The activity description (e.g., 'guided meditation')."
+          },
+          "time": {
+            "type": "string",
+            "description": "Duration of the activity (e.g., 'ten minutes')."
+          }
+        },
+        "required": [
+          "content",
+          "time"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "control_environment",
+      "description": "Control smart environment devices.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "target": {
+            "type": "string",
+            "description": "The target device (e.g., 'smart lights in kitchen')."
+          },
+          "value": {
+            "type": "string",
+            "description": "The setting value (e.g., '50%' or 'brightness: 50%')."
+          }
+        },
+        "required": [
+          "target",
+          "value"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "communication",
+      "description": "Send a message or share content with someone.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "message",
+              "share"
+            ],
+            "description": "The type of communication."
+          },
+          "target": {
+            "type": "string",
+            "description": "The recipient (e.g., name or platform)."
+          },
+          "content": {
+            "type": "string",
+            "description": "The message content."
+          }
+        },
+        "required": [
+          "action",
+          "target",
+          "content"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "find_directions",
+      "description": "Find directions to a specific location.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "to": {
+            "type": "string",
+            "description": "The destination address or place."
+          }
+        },
+        "required": [
+          "to"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "shop",
+      "description": "Search for items to purchase.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string",
+            "description": "What you are looking for."
+          }
+        },
+        "required": [
+          "content"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "realtime_weather",
+      "description": "Get real-time weather information including temperature, humidity, and wind conditions.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "city": {
+            "type": "string",
+            "description": "The city for which to retrieve the weather, e.g., 'Taipei'"
+          }
+        },
+        "required": [
+          "city"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "calendar_event",
+      "description": "Create, modify, or query events in the personal calendar.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "create",
+              "query",
+              "modify"
+            ],
+            "description": "The action to perform on the calendar."
+          },
+          "title": {
+            "type": "string",
+            "description": "The title of the event (e.g., 'Team Meeting')."
+          },
+          "time": {
+            "type": "string",
+            "description": "The time or time range for the event (e.g., 'tomorrow 2 PM' or 'this week')."
+          }
+        },
+        "required": [
+          "action",
+          "title"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "recipe_search",
+      "description": "Search for recipes based on ingredients or dish name.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Ingredients or the name of the dish (e.g., 'chicken and broccoli stir fry')."
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "financial_query",
+      "description": "Get real-time stock quotes or currency exchange rates.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "target": {
+            "type": "string",
+            "description": "The stock ticker symbol or currency pair (e.g., 'AAPL' or 'USD to EUR')."
+          }
+        },
+        "required": [
+          "target"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "play_media",
+      "description": "Play music or video content from a streaming service.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string",
+            "description": "The song, artist, album, or video to play (e.g., 'Jazz playlist' or 'latest news')."
+          }
+        },
+        "required": [
+          "content"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "book_service",
+      "description": "Book a local service such as a table at a restaurant or a taxi.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "service_type": {
+            "type": "string",
+            "enum": [
+              "restaurant",
+              "taxi",
+              "other"
+            ],
+            "description": "The type of service to book."
+          },
+          "details": {
+            "type": "string",
+            "description": "Specific details for the booking (e.g., 'table for 2 at Italian restaurant tonight 7 PM')."
+          }
+        },
+        "required": [
+          "service_type",
+          "details"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "note_taking",
+      "description": "Quickly create or append to a personal note or list.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string",
+            "description": "The content of the note (e.g., 'Grocery list: milk, eggs, bread')."
+          },
+          "title": {
+            "type": "string",
+            "description": "Optional title for the note/list."
+          }
+        },
+        "required": [
+          "content"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "travel_search",
+      "description": "Search for flight or hotel availability.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "flight",
+              "hotel"
+            ],
+            "description": "The type of travel service to search for."
+          },
+          "details": {
+            "type": "string",
+            "description": "Travel details (e.g., 'flights from SFO to JFK next Friday' or 'hotels in London for 3 nights')."
+          }
+        },
+        "required": [
+          "type",
+          "details"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "calculate",
+      "description": "Perform mathematical calculations or solve equations.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "expression": {
+            "type": "string",
+            "description": "The mathematical expression or problem (e.g., '15 percent of 300' or 'sqrt(81)')."
+          }
+        },
+        "required": [
+          "expression"
+        ]
+      }
+    }
+  },
+  {
+      "type": "function",
+      "function": {
+        "name": "CheckBusSchedule",
+        "description": "Check the bus schedule for a specific bus stop.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "busStopName": {
+              "type": "string",
+              "description": "The name of the bus stop."
+            },
+            "busScheduleInfo": {
+              "type": "string",
+              "description": "The bus schedule information."
+            }
+          },
+          "required": [
+            "busStopName",
+            "busScheduleInfo"
+          ]
+        }
+      }
+    }
+]
