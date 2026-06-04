@@ -3,6 +3,7 @@
 <div align="center">
 
 [![arXiv](https://img.shields.io/badge/v1.0_arXiv-2604.15037-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2604.15037)
+[![Hugging Face](https://img.shields.io/badge/🤗-Dataset-yellow)](https://huggingface.co/datasets/overji/ProVoice-Bench)
 
 </div>
 
